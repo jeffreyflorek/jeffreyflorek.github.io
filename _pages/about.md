@@ -11,7 +11,7 @@ title: 'About'
 I'm currently living in New York City with my partner, Jackie, and our senior chihuahua, Deno. This is how I spend my time:
 
 - Working as a Sales Engineer in the Building Automation industry;
-- Training to run my first half marathon (Queens Half Marathon &emdash; November 20, 2022!); and
+- Training to run my first half marathon (Queens Half Marathon --- November 20, 2022!); and
 - Trying to make this website look even somewhat acceptable.
 
 My current priorities in life are:
