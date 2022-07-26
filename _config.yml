@@ -1,68 +1,32 @@
 # Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# `jekyll serve`. If you change this file, please restart the server process.
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Jeffrey Florek
-email:
-description: >- # this means to ignore newlines until "baseurl:"
-  Personal website.
-twitter_username: jeffreyflorek
-github_username: jeffreyflorek
-minimal_mistakes_skin: default
-search: true
+# Theme Settings
+remote_theme: 'mmistakes/minimal-mistakes'
+minimal_mistakes_skin: 'air' # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
-# Build settings
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# Site Settings
+locale: 'en-US'
+title: 'Jeffrey Florek'
+name: 'Jeffrey Florek'
+description: 'My personal site.'
+masthead_title: 'JF' # overrides the website title displayed in the masthead, use " " for no title
 
-include:
-  - _pages
+# Social Sharing
+twitter:
+  username: 'jeffreyflorek'
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-# Plugins (previously gems:)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-
+# Site Author
 author:
   name: 'Jeffrey Florek'
-  avatar: '/assets/images/bio-photo.jpg'
+  avatar: '/assets/images/bio-photo.jpg' # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: 'Engineer, nerd, etc.'
+  location: 'New York, NY'
   links:
-    - label: 'Website'
-      icon: 'fas fa-fw fa-link'
-      url: 'https://jeffreyflorek.com'
     - label: 'Twitter'
       icon: 'fab fa-fw fa-twitter-square'
       url: 'https://twitter.com/jeffreyflorek'
@@ -73,6 +37,7 @@ author:
       icon: 'fab fa-fw fa-instagram'
       url: 'https://instagram.com/jeff.florek'
 
+# Site Footer
 footer:
   links:
     - label: 'Twitter'
@@ -85,6 +50,46 @@ footer:
       icon: 'fab fa-fw fa-instagram'
       url: 'https://instagram.com/jeff.florek'
 
+# Reading Files
+include:
+  - _pages
+
+# Conversion
+markdown: kramdown
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: 'America/New_York' # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path>/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Defaults
 defaults:
   # _posts
   - scope:
@@ -94,7 +99,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: # true
       share: true
       related: true
   # _pages
@@ -104,10 +109,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
